@@ -1,22 +1,31 @@
 <article class="min-h-52 rounded border border-solid border-brzinc p-4 duration-150 hover:border-orange"
     data-aos="zoom-in" data-aos-duration="1000">
+
+    @if (purchased) {
+    <div class="w-full flex justify-end">
+        <button matTooltip="Kurs haqida batafsil ma'lumot!" class="text-slate-600 hover:text-slate-400" color="accent ">
+            <mat-icon>info</mat-icon>
+        </button>
+    </div>
+    }
     <div class="inner !mb-0 flex flex-col flex-nowrap items-center justify-start ">
         <img class="h-12 w-12 object-contain" [src]="item.imgSrc" alt="" />
         <h3 class="mb-0 line-clamp-1  font-bold text-gray-700">
-          {{item.name}}
+            {{item.name}}
         </h3>
     </div>
     <div>
 
         <p class="line-clamp-3 font-abel text-sm font-normal text-gray-700 opacity-60 text-center">
-          {{item.desc}}
+            {{item.desc}}
         </p>
         <div>
             <span class="text-sm italic text-gray-400">Mentor: </span>
             <span class="italic ">{{item.mentorName}}</span>
         </div>
         <div class="mt-2 border-t pt-2 flex justify-end">
-            <button mat-flat-button [color]="purchased ? 'primary' : 'accent'   ">{{purchased ? 'Continue' : 'Join'}}</button>
+            <button mat-flat-button [color]="purchased ? 'primary' : 'accent'   ">{{purchased ? 'Continue' :
+                'Join'}}</button>
         </div>
     </div>
 </article>

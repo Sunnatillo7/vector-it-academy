@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StudentCoursesComponent } from '@students/my-courses/student-courses.component';
+import { StudentCoursesComponent } from '@students/student-courses/student-courses.component';
 
 @Component({
   selector: 'app-students',
